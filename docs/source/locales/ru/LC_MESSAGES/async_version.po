@@ -3716,7 +3716,7 @@ msgid "Do not stop polling when an ApiException occurs."
 msgstr "Не останавливать поллинг при возникновении ApiException."
 
 #: of telebot.async_telebot.AsyncTeleBot.polling:23
-msgid "Delay between two update retrivals"
+msgid "Delay between two update retrievals"
 msgstr "Задержка между получением апдейтов"
 
 #: of telebot.async_telebot.AsyncTeleBot.polling:42
