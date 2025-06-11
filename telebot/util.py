@@ -686,16 +686,21 @@ def validate_web_app_data(token: str, raw_init_data: str):
     return hmac.new(secret_key.digest(), data_check_string.encode(), sha256).hexdigest() == init_data_hash
 
 
-def validate_token(token) -> bool:        
+def validate_token(token) -> bool:
     if any(char.isspace() for char in token):
         raise ValueError('Token must not contain spaces')
-    
-    if ':' not in token:
-        raise ValueError('Token must contain a colon')
-    
-    if len(token.split(':')) != 2:
-        raise ValueError('Token must contain exactly 2 parts separated by a colon')
-    
+
+    parts = token.split(':')
+    if len(parts) != 2:
+        raise ValueError('Token must contain exactly one colon separating two parts')
+
+    bot_id, secret = parts
+    if not bot_id or not secret:
+        raise ValueError('Token must not have empty sections')
+
+    if not bot_id.isdigit():
+        raise ValueError('Bot ID must be numeric')
+
     return True
 
 def extract_bot_id(token) -> Union[int, None]:
