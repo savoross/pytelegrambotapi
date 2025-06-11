@@ -3047,7 +3047,7 @@ msgid "Use :meth:`infinity_polling` instead."
 msgstr ""
 
 #: of telebot.TeleBot.polling:15
-msgid "Delay between two update retrivals"
+msgid "Delay between two update retrievals"
 msgstr ""
 
 #: of telebot.TeleBot.polling:18

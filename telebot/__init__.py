@@ -1142,7 +1142,7 @@ class TeleBot:
         
             Install watchdog and psutil before using restart_on_change option.
 
-        :param interval: Delay between two update retrivals
+        :param interval: Delay between two update retrievals
         :type interval: :obj:`int`
 
         :param non_stop: Do not stop polling when an ApiException occurs.

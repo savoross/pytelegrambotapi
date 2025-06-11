@@ -281,7 +281,7 @@ class AsyncTeleBot:
         :param skip_pending: skip old updates
         :type skip_pending: :obj:`bool`
 
-        :param interval: Delay between two update retrivals
+        :param interval: Delay between two update retrievals
         :type interval: :obj:`int`
 
         :param timeout: Request connection timeout
@@ -418,7 +418,7 @@ class AsyncTeleBot:
         Function to process polling.
 
         :param non_stop: Do not stop polling when an ApiException occurs.
-        :param interval: Delay between two update retrivals
+        :param interval: Delay between two update retrievals
         :param timeout: Request connection timeout
         :param request_timeout: Timeout in seconds for long polling (see API docs)
         :param allowed_updates: A list of the update types you want your bot to receive.
