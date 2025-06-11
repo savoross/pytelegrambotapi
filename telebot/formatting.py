@@ -108,7 +108,7 @@ def mitalic(content: str, escape: Optional[bool]=True) -> str:
     :return: The formatted string.
     :rtype: :obj:`str`
     """
-    return '_{}_\r'.format(escape_markdown(content) if escape else content)
+    return '_{}_'.format(escape_markdown(content) if escape else content)
 
 
 def hitalic(content: str, escape: Optional[bool]=True) -> str:
